@@ -1,0 +1,25 @@
+sqlite3 database.db
+
+# Create table
+CREATE TABLE Customers(customer_id INTEGER NOT NULL, customer_name VARCHAR(255));
+
+# Show all tables
+.tables 
+
+# Show commands use to create the table (show db structure)
+.schema Customers
+
+# Show all records
+SELECT * FROM Customers;
+
+# Enable foreign key constraint
+PRAGMA foreign_keys=ON;
+
+# Generate all of the commands needed to recreate the database
+.dump
+
+# Exit
+.exit
+
+# github.com/TryGhost/node-sqlite3/wiki/API
+# sqlitetutorial.net/sqlite-nodejs/
